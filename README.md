@@ -7,5 +7,7 @@
 <p>Axios</p>
 <h2>Backend</h2>
 <p>Java</p>
+<p>Spring boot</p>
+<p>Hibernate<p>
 <p>PostgreSQL</p>
 <p>Redis</p>
