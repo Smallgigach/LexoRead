@@ -7,5 +7,5 @@
 <p>Axios</p>
 <h2>Backend</h2>
 <p>Java</p>
-<p>PostgreSql</p>
-<p>Reddis</p>
+<p>PostgreSQL</p>
+<p>Redis</p>
