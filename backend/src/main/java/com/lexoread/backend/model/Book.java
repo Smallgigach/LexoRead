@@ -24,6 +24,14 @@ public class Book {
     private String author;
     private String URLpdf;
     @Enumerated(EnumType.STRING)
-    private BookType type;
+    private Genre type;
+
+    public Genre getGenre() {
+        return type;
+    }
+
+    public void setGenre(Genre genre) {
+        this.type = genre;
+    }
 }
 
