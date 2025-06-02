@@ -1,6 +1,6 @@
 package com.lexoread.backend.model;
 
-public enum BookType {
+public enum Genre {
     FICTION,
     NONFICTION,
     SCIENTIFIC,
