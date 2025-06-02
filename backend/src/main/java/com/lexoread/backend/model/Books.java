@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book {
+public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,6 +23,8 @@ public class Book {
     private String title;
     private String author;
     private String URLpdf;
+    private String thumbail;
+
     @Enumerated(EnumType.STRING)
     private Genre type;
 

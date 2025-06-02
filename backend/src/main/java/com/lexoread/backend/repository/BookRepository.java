@@ -8,11 +8,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.lexoread.backend.model.Book;
+import com.lexoread.backend.model.Books;
 
 @Repository
-public interface BookRepository extends JpaRepository<Book, Long> {
+public interface BookRepository extends JpaRepository<Books, Long> {
 	@Query(value = "SELECT * FROM book LIMIT :limit OFFSET :offset", nativeQuery = true)
-    List<Book> findBooksWithLimitOffset(@Param("limit") int limit, @Param("offset") int offset);
+    List<Books> findBooksWithLimitOffset(@Param("limit") int limit, @Param("offset") int offset);
 
 }
