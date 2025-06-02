@@ -1,0 +1,84 @@
+.sign__background {
+    background-image: url('../../../assets/img/SignInUp/Fon.png');
+     background-color: #101010;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    color: #FFE9DA;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sign__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101010;
+    width: 476px;
+    height: 700px;
+    justify-content: center;
+    text-align: center;
+border-radius: 50px;
+min-height: 700px;
+padding: 40px 20px;
+
+}
+.sign__title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 4px;
+
+}
+.sign_subTitle {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Inter", serif;
+    margin-bottom: 24px;
+}
+.arrow {
+  position: relative;
+  cursor: pointer;
+  right: 182px;
+  bottom: 10px;
+  min-height: 32px;
+}
+.sign__link {
+    
+width: 310px;
+height: 63px;
+
+background: #101010;
+border-radius: 38px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+border: 1px solid #FFE9DA;
+color: #FFF;
+}
+.sign_OAuth {
+    margin-top: 20px;
+ width: 50px;
+ height: 50px;
+ gap: 34px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.sign__block > span {
+   margin: 10px 0; 
+}
+.sign_subTitle_2 {
+    margin-top: 28px;
+    font-size: 15px;
+    font-weight: 500;
+}
