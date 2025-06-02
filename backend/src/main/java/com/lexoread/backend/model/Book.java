@@ -1,8 +1,15 @@
 package com.lexoread.backend.model;
 
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -16,5 +23,7 @@ public class Book {
     private String title;
     private String author;
     private String URLpdf;
+    @Enumerated(EnumType.STRING)
+    private BookType type;
 }
 
