@@ -14,7 +14,7 @@ public class BookService {
     public BookService(BookRepository repo) {
         this.repo = repo;
     }
-    public List<Book> findBooks(Long userId, int limit, int offset) {
+    public List<Book> findAll(Long userId, int limit, int offset) {
         List<Book> books = repo.findBooksWithLimitOffset(limit, offset);
 //        Map<String, Double> userRatings = getUserInterests(userId);
 //

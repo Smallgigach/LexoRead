@@ -26,7 +26,7 @@ public class BookController {
 
     @GetMapping("/books")
     public List<Book> getBooks(@RequestParam Long userId, int limit, int offset) {
-        return service.findBooks(userId, limit, offset);
+        return service.findAll(userId, limit, offset);
     }
 
 

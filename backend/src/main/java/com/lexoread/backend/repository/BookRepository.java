@@ -12,7 +12,7 @@ import com.lexoread.backend.model.Book;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
-	@Query(value = "SELECT * FROM book LIMIT :limit OFFSET :offset", nativeQuery = true)
+	@Query(value = "SELECT * FROM books LIMIT :limit OFFSET :offset", nativeQuery = true)
     List<Book> findBooksWithLimitOffset(@Param("limit") int limit, @Param("offset") int offset);
 
 }
