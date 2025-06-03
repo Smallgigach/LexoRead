@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.lexoread.backend.model.Books;
+import com.lexoread.backend.model.Book;
 import com.lexoread.backend.repository.BookRepository;
 
 @Service
@@ -14,8 +14,8 @@ public class BookService {
     public BookService(BookRepository repo) {
         this.repo = repo;
     }
-    public List<Books> findBooks(Long userId, int limit, int offset) {
-        List<Books> books = repo.findBooksWithLimitOffset(limit, offset);
+    public List<Book> findBooks(Long userId, int limit, int offset) {
+        List<Book> books = repo.findBooksWithLimitOffset(limit, offset);
 //        Map<String, Double> userRatings = getUserInterests(userId);
 //
 //        // Сортировка по интересам пользователя
@@ -27,21 +27,21 @@ public class BookService {
         return books;
     }
 
-    public Books findById(Long id) {
+    public Book findById(Long id) {
         return repo.findById(id).orElseThrow();
     }
 
-    public Books save(Books books) {
-        return repo.save(books);
+    public Book save(Book book) {
+        return repo.save(book);
     }
 
-    public Books update(Long id, Books newBooks) {
-        Books books = findById(id);
-        books.setTitle(newBooks.getTitle());
-        books.setAuthor(newBooks.getAuthor());
-        books.setURLpdf(newBooks.getURLpdf());
-        books.setGenre(newBooks.getGenre());
-        return repo.save(books);
+    public Book update(Long id, Book newBook) {
+        Book book = findById(id);
+        book.setTitle(newBook.getTitle());
+        book.setAuthor(newBook.getAuthor());
+        book.setURLpdf(newBook.getURLpdf());
+        book.setGenre(newBook.getGenre());
+        return repo.save(book);
     }
 
     public void delete(Long id) {

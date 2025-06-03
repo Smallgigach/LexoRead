@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lexoread.backend.model.Books;
+import com.lexoread.backend.model.Book;
 import com.lexoread.backend.service.BookService;
 
 @RestController
@@ -25,24 +25,24 @@ public class BookController {
     }
 
     @GetMapping("/books")
-    public List<Books> getBooks(@RequestParam Long userId, int limit, int offset) {
+    public List<Book> getBooks(@RequestParam Long userId, int limit, int offset) {
         return service.findBooks(userId, limit, offset);
     }
 
 
     @GetMapping("/{id}")
-    public Books getById(@PathVariable Long id) {
+    public Book getById(@PathVariable Long id) {
         return service.findById(id);
     }
 
     @PostMapping
-    public Books create(@RequestBody Books books) {
-        return service.save(books);
+    public Book create(@RequestBody Book book) {
+        return service.save(book);
     }
 
     @PutMapping("/{id}")
-    public Books update(@PathVariable Long id, @RequestBody Books books) {
-        return service.update(id, books);
+    public Book update(@PathVariable Long id, @RequestBody Book book) {
+        return service.update(id, book);
     }
 
     @DeleteMapping("/{id}")
