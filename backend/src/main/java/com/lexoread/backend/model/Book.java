@@ -1,11 +1,11 @@
 package com.lexoread.backend.model;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Table(name = "books")
 @Entity
 @Data
@@ -22,7 +22,6 @@ public class Book {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User author;
-
     private String URLpdf;
     private String thumbail;
 

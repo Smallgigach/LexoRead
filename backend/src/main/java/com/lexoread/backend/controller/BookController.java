@@ -36,9 +36,8 @@ public class BookController {
     })
     @GetMapping("/books")
     public List<Book> getBooks(@RequestParam Long userId, int limit, int offset) {
-        return service.findBooks(userId, limit, offset);
+        return service.findAll(userId, limit, offset);
     }
-
     @Operation(summary = "Получить книгу по ID", description = "Возвращает книгу по её уникальному идентификатору")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Книга успешно найдена"),

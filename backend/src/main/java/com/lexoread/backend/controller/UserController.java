@@ -1,3 +1,4 @@
+//ХАВХЫАХЫВХАЫФХХ
 package com.lexoread.backend.controller;
 
 import com.lexoread.backend.model.Book;
@@ -10,7 +11,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,7 +40,6 @@ public class UserController {
             @RequestParam(defaultValue = "0") int offset) {
         return service.findAll(limit, offset);
     }
-
     @Operation(summary = "Получить пользователя по ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Пользователь найден",
@@ -52,8 +51,8 @@ public class UserController {
             @Parameter(description = "ID пользователя", required = true, example = "1")
             @PathVariable Long id) {
         return service.findById(id);
-    }
 
+    }
     @Operation(summary = "Создать нового пользователя")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Пользователь создан"),

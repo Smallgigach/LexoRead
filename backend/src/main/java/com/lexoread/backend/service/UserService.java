@@ -43,6 +43,7 @@ public class UserService {
             throw new IllegalArgumentException("Username already exists");
         }
         if (repo.existsByEmail(user.getEmail())) {
+
             throw new IllegalArgumentException("Email already exists");
         }
         return repo.save(user);
