@@ -13,6 +13,7 @@
     text-align: center;
 }
 .sign__block {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,11 +41,10 @@ padding: 40px 20px;
     margin-bottom: 24px;
 }
 .arrow {
-  position: relative;
+  position: absolute;
   cursor: pointer;
-  right: 182px;
-  bottom: 10px;
-  min-height: 32px;
+  left: 58px;
+  bottom: 680px;
 }
 .sign__link {
     
@@ -79,6 +79,21 @@ color: #FFF;
 }
 .sign_subTitle_2 {
     margin-top: 28px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
+}
+.sign__form {
+    display: flex;
+    flex-direction: column;
+}
+.or {
+    margin: 10px;
+    font-size: 16px;
+}
+.error {
+    position: relative;
+    color: red;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
