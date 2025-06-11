@@ -15,3 +15,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+jwt:
+  secret: my-very-secure-secret-key-123456 # надо придумать 
